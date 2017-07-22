@@ -1,7 +1,6 @@
 package leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by wentao on 2017/7/22 0022.
@@ -48,11 +47,36 @@ public class Solution {
         }
         return res;
     }
+
     //异或
     public int singleNumber(int[] nums) {
         int res = 0;
         for (int i = 0; i < nums.length; i++) {
             res = res ^ nums[i];
+        }
+        return res;
+    }
+
+    public int[] intersection(int[] nums1, int[] nums2) {
+        List<Integer> integerList = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums1.length; i++) {
+            set.add(nums1[i]);
+        }
+        Set<Integer> integers = new HashSet<>();
+        for (int i = 0; i < nums2.length; i++) {
+            if (integers.contains(nums2[i])) {
+                continue;
+            }
+            if (set.contains(nums2[i])) {
+                integerList.add(nums2[i]);
+            }
+            integers.add(nums2[i]);
+
+        }
+        int res[] = new int[integerList.size()];
+        for (int i = 0; i < integerList.size(); i++) {
+            res[i] = integerList.get(i);
         }
         return res;
     }

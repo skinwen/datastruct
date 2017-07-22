@@ -4,10 +4,20 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
 /**
  * Created by wentao on 2017/7/22 0022.
  */
 public class SolutionTest {
+    @Test
+    public void intersection() throws Exception {
+        int num1[] = new int[]{1, 2, 2, 1};
+        int num2[] = new int[]{2, 2};
+        int res[] = solution.intersection(num1,num2);
+        logger.info("res :{}", Arrays.toString(res));
+    }
+
     @Test
     public void singleNumber() throws Exception {
         int arr[] = new int[]{1, 1, 2, 2, 4};
