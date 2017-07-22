@@ -12,6 +12,7 @@ public class SolutionTest {
     private static final Logger logger = LoggerFactory.getLogger(SolutionTest.class);
     private Solution solution = new Solution();
 
+    //[1, 2]
     @Test
     public void twoSum() throws Exception {
         int nums[] = new int[]{3, 2, 4};
@@ -19,6 +20,7 @@ public class SolutionTest {
         logger.info("{}", res);
     }
 
+    //2
     @Test
     public void hammingDistance() throws Exception {
         int x = 1;
