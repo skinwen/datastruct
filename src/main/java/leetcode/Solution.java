@@ -38,4 +38,22 @@ public class Solution {
         return res;
     }
 
+    //quick sort
+    public int arrayPairSum(int[] nums) {
+        Sort.sort(nums, 0, nums.length - 1);
+//        Arrays.sort(nums);
+        int res = 0;
+        for (int i = 0; i < nums.length; i = i + 2) {
+            res += nums[i];
+        }
+        return res;
+    }
+    //异或
+    public int singleNumber(int[] nums) {
+        int res = 0;
+        for (int i = 0; i < nums.length; i++) {
+            res = res ^ nums[i];
+        }
+        return res;
+    }
 }
