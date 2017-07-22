@@ -15,8 +15,8 @@ public class Solution {
             if (null == temp) {
                 map.put(nums[i], i);
             } else {
-                res[0] = Math.min(temp, i);
-                res[1] = Math.max(temp, i);
+                res[0] = i > temp ? temp : i;
+                res[1] = i > temp ? i : temp;
                 return res;
             }
 
