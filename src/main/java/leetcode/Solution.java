@@ -1,5 +1,6 @@
 package leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,20 @@ public class Solution {
                 return res;
             }
 
+        }
+        return res;
+    }
+
+    public int hammingDistance(int x, int y) {
+        int res = 0;
+        for (int i = 0; i < 32; i++) {
+            int xd = x & 1;
+            int yd = y & 1;
+            if (xd != yd) {
+                res++;
+            }
+            x = x >>> 1;
+            y = y >>> 1;
         }
         return res;
     }
