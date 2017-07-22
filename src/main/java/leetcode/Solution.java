@@ -80,4 +80,39 @@ public class Solution {
         }
         return res;
     }
+
+    public boolean isPowerOfThree(int n) {
+        if (n == 3 || n == 1) {
+            return true;
+        }
+
+        if (n == 2 || n == 0) {
+            return false;
+        }
+
+        if (n % 3 != 0) {
+            return false;
+        }
+
+        return isPowerOfThree(n / 3);
+    }
+
+    //二分查找
+    public int firstBadVersion(int n) {
+        int x = 0;
+        int y = n;
+        while (x < y) {
+            int mid = (y - x) / 2 + x;
+            if (isBadVersion(mid)) {
+                y = mid;
+            } else {
+                x = mid + 1;
+            }
+        }
+        return x;
+    }
+
+    private boolean isBadVersion(int version) {
+        return false;
+    }
 }

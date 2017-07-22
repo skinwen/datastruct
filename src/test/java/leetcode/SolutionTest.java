@@ -11,10 +11,16 @@ import java.util.Arrays;
  */
 public class SolutionTest {
     @Test
+    public void isPowerOfThree() throws Exception {
+        boolean res = solution.isPowerOfThree((int) (Math.pow(3,10) + 1.0));
+        logger.info("res : {}", res);
+    }
+
+    @Test
     public void intersection() throws Exception {
         int num1[] = new int[]{1, 2, 2, 1};
         int num2[] = new int[]{2, 2};
-        int res[] = solution.intersection(num1,num2);
+        int res[] = solution.intersection(num1, num2);
         logger.info("res :{}", Arrays.toString(res));
     }
 
