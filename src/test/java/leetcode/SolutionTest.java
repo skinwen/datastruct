@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import static org.junit.Assert.*;
 
 /**
- * Created by Administrator on 2017/7/22 0022.
+ * Created by wentao on 2017/7/22 0022.
  */
 public class SolutionTest {
     private static final Logger logger = LoggerFactory.getLogger(SolutionTest.class);
